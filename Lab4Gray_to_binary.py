@@ -3,7 +3,7 @@ import numpy as np
 import sys
 from matplotlib import pyplot as plt
 # Global Variable
-threshold_value = 180
+threshold_value = 50
 source_img = np.zeros((10,10,3), dtype=np.uint8)
 adjusted_img = np.zeros((10,10,3), dtype=np.uint8)
 hist_img = np.zeros((10,10,3), dtype=np.uint8)
@@ -38,7 +38,7 @@ def main():
     if(len(sys.argv)>=2):
         source_img = cv.imread(str(sys.argv[1]))
     else :
-        source_img = cv.imread("./HOME9.PNG", 1)
+        source_img = cv.imread("home5.PNG", 1)
 
     source_img = cv.cvtColor(source_img,cv.COLOR_BGR2GRAY) # convert to GrayScale #เปิดใช้ GrayScale แปลง จาก BGR เป็น GRAY  #อธิบายการทำงาน
     #อธิบายภาพแล้วก็ส่งไม่ต้องยาวมาก

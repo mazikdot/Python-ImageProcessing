@@ -36,7 +36,7 @@ plt.figure(figsize=(18, 14))
 plt.suptitle("Grayscale histogram equalization with cv2.equalizeHist()", fontsize=16, fontweight='bold')
 
 # Load the image and convert it to grayscale:
-image = cv2.imread('tes.PNG')
+image = cv2.imread('tests6.PNG')
 gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
 # Calculate the histogram calling cv2.calcHist()
@@ -44,7 +44,7 @@ gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 # The second argument is the indexes of the channels to be used to calculate the histogram
 # The third argument is a mask to compute the histogram for the masked pixels
 # The fourth argument is a list containing the number of bins for each channels
-# The fifth argument is the range of possible pixel values
+# The fifth argument is the range of possible pixel values  
 hist = cv2.calcHist([gray_image], [0], None, [256], [0, 256])
 
 # Equalize image and calculate histogram:
