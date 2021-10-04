@@ -23,7 +23,6 @@ while True:
     
     cv.imshow('Frame', frame)
     cv.imshow('FG Mask', fgMask)
-    
     keyboard = cv.waitKey(30)
     if keyboard == 'q' or keyboard == 27:
         break
